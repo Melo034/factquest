@@ -52,6 +52,7 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Copy the extracted project folder into this directory.
 
 3. **Set Up the Database:**
+   - Start the Apache and MySql server to allow local hosting of the application.
    - Open your web browser (Google Chrome or Mozilla Firefox recommended).
    - Go to `http://localhost/phpmyadmin`.
    - Create a new database named `fact_quest`.
@@ -59,7 +60,7 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Choose the `.sql` file provided in the unzipped project folder named `fact_quest`.
    - Import the database file into `fact_quest`.
 
-4. **Run the Project:**
+5. **Run the Project:**
    - After setting up the database, navigate to `http://localhost/[PROJECT_FOLDER_NAME]/` in your browser to access the application.
 
 ## Live Demo
