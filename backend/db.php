@@ -3,9 +3,9 @@
 
 // Database connection parameters
 $host = 'localhost';
-$dbname   = 'u159491665_factquest';
-$username = 'u159491665_factquest';
-$password = '2M^x868@d#[';
+$dbname   = 'fact_quest';
+$username = 'root';
+$password = '';
 $charset = 'utf8mb4';
 
 // Data Source Name (DSN) for connecting to the database
