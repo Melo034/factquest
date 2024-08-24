@@ -9,6 +9,35 @@ if (!isset($_SESSION['email'])) {
 
 $id = $_SESSION['id'];
 
+// Check if the delete button is clicked
+if (isset($_POST['delete'])) {
+    try {
+        // Fetch the current image filename from the database before deleting the profile
+        $stmt = $pdo->prepare("SELECT image FROM users WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row && !empty($row['image'])) {
+            $imagePath = "./Images/" . $row['image'];
+            // Delete the image file from the directory if it exists
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+
+        // Prepare SQL to delete the user's profile
+        $stmt = $pdo->prepare("DELETE FROM users WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+
+        // Destroy the session and redirect to the home page
+        session_destroy();
+        header('Location: ./index.php?message=Profile deleted successfully');
+        exit();
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+}
+
 if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -210,7 +239,7 @@ if (isset($_POST['submit'])) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex justify-center mt-2">
+                            <div class="flex gap-3 justify-center mt-2">
                                 <button name="submit" class="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-lime-600 rounded-md group">
                                     <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-lime-700 rounded group-hover:-mr-4 group-hover:-mt-4">
                                         <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
@@ -220,6 +249,16 @@ if (isset($_POST['submit'])) {
                                     </span>
                                     <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-lime-700 rounded-md group-hover:translate-x-0"></span>
                                     <span class="relative w-full text-left font-bold text-white transition-colors duration-200 ease-in-out group-hover:text-white">Save</span>
+                                </button>
+                                <button name="delete" class="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-red-600 rounded-md group">
+                                    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                                        <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                                    </span>
+                                    <span class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-800 rounded group-hover:-ml-4 group-hover:-mb-4">
+                                        <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                                    </span>
+                                    <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-red-700 rounded-md group-hover:translate-x-0"></span>
+                                    <span class="relative w-full text-left font-bold text-white transition-colors duration-200 ease-in-out group-hover:text-white">Delete Profile</span>
                                 </button>
                             </div>
 
