@@ -58,7 +58,7 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Create a new database named `fact_quest`.
    - Click on the "Import" tab.
    - Choose the `.sql` file provided in the unzipped project folder named `fact_quest`.
-   - Import the database file into `fact_quest`.
+   - Import the database file.
 
 5. **Run the Project:**
    - After setting up the database, navigate to `http://localhost/[PROJECT_FOLDER_NAME]/` in your browser to access the application.
