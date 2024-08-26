@@ -2,6 +2,8 @@
 
 **FACTQUEST** is an interactive platform that allows users to post facts or news items along with a source URL. Other users can then vote on the authenticity of the posted items by marking them as either "True" or "False." This platform fosters community-driven verification and validation of information.
 
+**Website Screenshots
+
 ![Screenshot 2024-08-24 173646](https://github.com/user-attachments/assets/594f4e30-a91d-4964-a21a-62a54d28a524)
 
 ![Screenshot 2024-08-24 173955](https://github.com/user-attachments/assets/b23bc45e-2557-4e91-9aa9-3d8ddcdcb688)
