@@ -2,6 +2,10 @@
 
 **FACTQUEST** is an interactive platform that allows users to post facts or news items along with a source URL. Other users can then vote on the authenticity of the posted items by marking them as either "True" or "False." This platform fosters community-driven verification and validation of information.
 
+![Screenshot 2024-08-24 173646](https://github.com/user-attachments/assets/594f4e30-a91d-4964-a21a-62a54d28a524)
+
+![Screenshot 2024-08-24 173955](https://github.com/user-attachments/assets/b23bc45e-2557-4e91-9aa9-3d8ddcdcb688)
+
 ## Table of Contents
 
 1. [Technology Overview](#technology-overview)
@@ -42,7 +46,7 @@ Before installing and running the project locally, ensure that you have the foll
 To set up FACTQUEST on your local machine, follow these steps:
 
 1. **Download the Project:**
-   - Download the ZIP file of the project from the repository.
+   - Run git clone or Download the ZIP file of the project from the repository.
 
 2. **Extract the Project Files:**
    - Unzip the downloaded file.
@@ -55,10 +59,8 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Start the Apache and MySql server to allow local hosting of the application.
    - Open your web browser (Google Chrome or Mozilla Firefox recommended).
    - Go to `http://localhost/phpmyadmin`.
-   - Create a new database named `fact_quest`.
-   - Click on the "Import" tab.
-   - Choose the `.sql` file provided in the unzipped project folder named `fact_quest`.
-   - Import the database file into `fact_quest`.
+   - Import the .sql file into your database system (MySQL).
+     
 
 5. **Run the Project:**
    - After setting up the database, navigate to `http://localhost/[PROJECT_FOLDER_NAME]/` in your browser to access the application.
