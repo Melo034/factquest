@@ -64,7 +64,7 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Import the .sql file into your database system (MySQL).
      
 
-5. **Run the Project:**
+4. **Run the Project:**
    - After setting up the database, navigate to `http://localhost/[PROJECT_FOLDER_NAME]/` in your browser to access the application.
 
 ## Live Demo
