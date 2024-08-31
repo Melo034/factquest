@@ -98,7 +98,7 @@ To set up FACTQUEST on your local machine, follow these steps:
    - Go to
    ```bash
    http://localhost/phpmyadmin
-  -Import the .sql file into your database system (MySQL). 
+  - Import the .sql file into your database system (MySQL). 
      
 
 
