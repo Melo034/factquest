@@ -58,7 +58,7 @@
 ### 7. Performance
 - **Fast Loading Times**: Optimized for fast loading times.
 - **Efficient Database Queries**: Implements efficient database queries and caching mechanisms.
-- 
+
 ## Installation Requirements
 
 Before installing and running the project locally, ensure that you have the following software installed on your machine:
