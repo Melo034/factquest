@@ -109,4 +109,4 @@ To set up FACTQUEST on your local machine, follow these steps:
 
 ## Live Demo
 
-You can also explore a live version of the project here: [FACTQUEST Live Demo](https://problemsolvingsl.com/factquest/)
+You can also explore a live version of the project here: [FACTQUEST Live Demo](https://factquest.ingmelo.com)
